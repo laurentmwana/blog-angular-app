@@ -1,0 +1,47 @@
+article {
+    box-shadow: 1px 1px 10px silver;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid   #d0d3d4  ;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: helvetica, sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col3 {
+    width: 30%;
+}
+
+.col3 {
+    width: 60%;
+}
+
+.img-fluid {
+width: 400px;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.categories b {
+    padding: 3px;
+    font-size: 12px;
+    background-color: #cacfd2 ;
+    border-radius: 5px;
+}
+
+.row-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
