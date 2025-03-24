@@ -1,9 +1,10 @@
 import { Component, Input, input } from '@angular/core';
 import { Article } from '../models/article';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-article',
-  imports: [],
+  imports: [NgFor],
   templateUrl: './article.component.html',
   styleUrl: './article.component.css'
 })

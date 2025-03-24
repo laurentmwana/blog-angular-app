@@ -1,7 +1,7 @@
 <article >
     <div class="row">
         <div class="col3">
-            <img class="img-fluid" alt="" src="{{ article.image }}" >
+            <img class="img-fluid" alt="image de l'article {{ article.title }}" src="{{ article.image }}" >
         </div>
         <div class="col7">
             <h3>
@@ -9,27 +9,27 @@
             </h3>
             <div>
                 <p class="categories">
-                    <b>Informatique</b>
-                    <span>|</span>
-                    <b>Pragrogrammation</b>
+                    <b *ngFor="let category of article.categories">
+                      {{category.name}}
+                    </b>
                 </p>
-                <p>
+                <p class="post-content">
                     {{ excerptText(article.content, 30) }}
                 </p>
                 <p>
-                    <i>Publié par <strong>Labeya</strong> le 12 mai 2040 à 12h12 </i>
+                    <i>Publié par <strong> {{ article.author }} </strong> {{article.created_at}} </i>
                 </p>
             </div>
             <div class="row-action">
                 <div>
-                    <a href="">
-                        {{ article.nb_comments }}
-                        {{ article.nb_comments > 0 ? 'Commentaires' : 'Commentaire' }}
+                    <a href="" class="comment-count">
+                        {{ article.comments }}
+                        {{ article.comments > 0 ? 'Commentaires' : 'Commentaire' }}
                     </a>
                 </div>
 
                 <div>
-                    <a href="">Voir la suite</a>
+                    <a href="" class="more">Voir la suite</a>
                 </div>
             </div>
         </div>
